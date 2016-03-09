@@ -1,0 +1,47 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="list_horizonal_matgin">2dp</dimen>
+    <dimen name="share_button_margin">150dp</dimen>
+    <dimen name="TeamNames">17sp</dimen>
+    <dimen name="Score">30sp</dimen>
+    <dimen name="League">15sp</dimen>
+    <dimen name="normal_paddding">8dp</dimen>
+
+
+    <dimen name="widget_original_width">250dp</dimen>
+    <dimen name="widget_original_height">110dp</dimen>
+    <dimen name="widget_min_width">80dp</dimen>
+    <dimen name="widget_min_heigth">40dp</dimen>
+
+    <integer name="eredivisie_code" translatable="false">404</integer>
+    <integer name="bundesliga_1_code" translatable="false">394</integer>
+    <integer name="bundesliga_2_code" translatable="false">395</integer>
+    <integer name="ligue_1_code" translatable="false">396</integer>
+    <integer name="ligue_2_code" translatable="false">397</integer>
+    <integer name="premier_league_code" translatable="false">398</integer>
+    <integer name="primera_division_code" translatable="false">399</integer>
+    <integer name="segunda_division_code" translatable="false">400</integer>
+    <integer name="serie_a_code" translatable="false">401</integer>
+    <integer name="primeira_liga_code" translatable="false">402</integer>
+    <integer name="bundesliga_3_code" translatable="false">403</integer>
+    <integer name="champions_league_code" translatable="false">405</integer>
+
+    <integer-array name="league_codes">
+        <item>@integer/bundesliga_1_code</item>
+        <item>@integer/bundesliga_2_code</item>
+        <item>@integer/ligue_1_code</item>
+        <item>@integer/ligue_2_code</item>
+        <item>@integer/premier_league_code</item>
+        <item>@integer/primera_division_code</item>
+        <item>@integer/segunda_division_code</item>
+        <item>@integer/serie_a_code</item>
+        <item>@integer/primeira_liga_code</item>
+        <item>@integer/bundesliga_3_code</item>
+        <item>@integer/eredivisie_code</item>
+        <item>@integer/champions_league_code</item>
+    </integer-array>
+
+
+</resources>
