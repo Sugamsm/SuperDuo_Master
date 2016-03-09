@@ -1,0 +1,163 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="it.jaschke.alexandria.AddBook">
+
+    <RelativeLayout
+        android:id="@+id/main_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal|top"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/eancontainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_hint"
+                android:inputType="number"
+                android:maxLength="@integer/ean_size"
+                android:maxLines="1"
+                android:minEms="@integer/ean_width"
+                android:paddingRight="20dp"
+                android:saveEnabled="true" />
+
+            <Button
+                android:id="@+id/scan_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/primaryColorDark"
+                android:text="@string/scan_button"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/book_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/eancontainer"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <TextView
+                android:id="@+id/bookTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:paddingRight="20dp"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/head_line"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bookSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bookTitle"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="3" />
+
+            <TextView
+                android:id="@+id/authors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/bookSubTitle"
+                android:layout_marginTop="20dp"
+                android:gravity="end"
+                android:textSize="@dimen/small_fontsize" />
+
+            <ImageView
+                android:id="@+id/bookCover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/authors"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/book_cover" />
+
+            <TextView
+                android:id="@+id/categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bookCover"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/small_fontsize" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/delete_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_action_discard"
+                android:text="@string/cancel_button" />
+
+            <Button
+                android:id="@+id/save_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_action_accept"
+                android:text="@string/ok_button" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/error_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/error_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:text="@string/error_handler"
+            android:textSize="@dimen/simple_font" />
+
+        <Button
+            android:id="@+id/retry_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/error_tv"
+            android:layout_centerHorizontal="true"
+            android:background="@color/primaryColorDark"
+            android:padding="7dp"
+            android:text="Retry"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/load_pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+</FrameLayout>
